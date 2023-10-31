@@ -1,0 +1,8 @@
+﻿Service Name,Location,Failure Ratio,Average Latency,Tail Latency,Usage/Day,Latitude,Longtitude
+LectoTrans,Germany,0.1,5,100,5000,51.1657,10.4515
+LectoTrans,Tokyo,0.2,10,200,6000,35.6762,139.6503
+LectoTrans,South America,0.3,15,300,7000,8.7832,-55.4915
+LectoTrans,Sydney,0.4,20,400,8000,-33.8688,151.2093
+LectoTrans,Mumbai,0.5,25,500,9000,19.076,72.8777
+LectoTrans,Michigan,0.6,30,600,10000,44.3148,-85.6024
+LectoTrans,Silicon Valley,0.7,35,700,11000,37.3875,-122.0576

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QoS Monitor</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script type="module" src="./app.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <h3>Google Map API</h3>
+  <!--The div element for the map -->
+  <div id="map"></div>
+  <!--Floating average latency window-->
+  <div id="legend" style="position: absolute; top: 10%; left: 0px">
+    <div class="title">Average Latency</div>
+    <div id="container">
+      <div class="box" style="background-color: #DFFF00; border-color: #DFFF00;"></div>
+      <div class="legend">&lt;10</div>
+    </div>
+    <div id="container">
+      <div class="box" style="background-color: #FFA07A; border-color: #FFA07A;"></div>
+      <div class="legend">10-19.9</div>
+    </div>
+    <div id="container">
+      <div class="box" style="background-color: #FF8000; border-color: #FF8000;"></div>
+      <div class="legend">20-29.9</div>
+    </div>
+    <div id="container">
+      <div class="box" style="background-color: #FF0000; border-color: #FF0000;"></div>
+      <div class="legend">&gt;30</div>
+    </div>
+  </div>
+  <!-- prettier-ignore -->
+  <script>
+    (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+      key: "AIzaSyAAStQQsKzdf7k3l6kMtS69NOUnM4jXgQA",
+      v: "beta",
+      // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+      // Add other bootstrap parameters as needed, using camel case.
+    });
+  </script>
+  <!--<script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyDVCjUkZGbxt6Bhk2InSMGaBS_pMMsoxWc", v: "weekly"});</script>-->
+</body>
+
+</html>

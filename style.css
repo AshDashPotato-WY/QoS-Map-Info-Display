@@ -1,0 +1,52 @@
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ #map {
+    height: 90%;
+  }
+  
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*
+   * Set up floating information window
+   */
+  #legend {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    font-family: Roboto;
+    margin-left: 1em;
+    margin-top: 5%;
+    overflow: hidden;
+    width: 12em;
+  }
+  #container {
+    display: flex;
+    margin: 0.5em 1em;
+  }
+  #legend div .box {
+    border: 3px solid;
+    display: flex;
+    height: 2em;
+    width: 4em;
+  }
+  #legend div .legend {
+    display: flex;
+    padding: 0.5em;
+  }
+  div {
+    display: block;
+  }
+  .title {
+    background-color: none;
+    margin-bottom: 0.5em;
+    padding: 0.5em 1em;
+  }
