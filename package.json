@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-  },
+  }, 
+  "config": {
+    "port": "2222"
+  } ,
   "keywords": [],
   "author": "AshDashPotato <ashleyweiyu@yahoo.com>",
   "license": "ISC"

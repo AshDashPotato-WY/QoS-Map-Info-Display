@@ -13,7 +13,7 @@ server.on('listening', () => {
 
   const address = server.address()
 
-  console.log('Listining to ', 'Address: ', address.address, 'Port: ', address.port)
+  console.log('Listening to ', 'Address: ', address.address, 'Port: ', address.port)
 })
 
 //================ When receiving data from client 
