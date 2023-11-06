@@ -1,7 +1,7 @@
 // Initialize and add the map
 let map;
 
-// Import data from JSON file
+// Initialize an array to store data
 let dataArray = [];
 
 let file_path = ['./output.json'];
